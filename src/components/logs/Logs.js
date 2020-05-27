@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import LogItem from '../../components/logs/LogItem';
 import Preloader from '../layout/Preloader';
-
-const Logs = () => {
-  const [logs, setLogs] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+import PropTypes from 'prop-types';
+import { getLogs } from '../../actions/logActions';
+//we are using destructuring from the app level state, since
+//the method and values have been brought in through props
+const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
     getLogs();
     // eslint-disable-next-line
   }, []);
 
-  const getLogs = async () => {
-    setLoading(true);
-    const res = await fetch('/logs');
-    const data = await res.json();
-
-    setLogs(data);
-    setLoading(false);
-  };
-  if (loading) {
+  if (loading || logs === null) {
     return <Preloader />;
   }
   return (
@@ -36,4 +29,17 @@ const Logs = () => {
   );
 };
 
-export default Logs;
+Logs.propTypes = {
+  log: PropTypes.object.isRequired,
+  getLogs: PropTypes.func.isRequired,
+};
+
+//if you want to get anything from the app level state to the component,
+//it is brought in as a prop
+//the log key is the name of the prop, and the log value pertains to the reducer
+const mapStateToProps = (state) => ({
+  log: state.log,
+});
+//the connect takes in the props we want as the first argument, and an object
+//of methods being used as the second. in the second parenthesis, the component is placed as the value
+export default connect(mapStateToProps, { getLogs })(Logs);

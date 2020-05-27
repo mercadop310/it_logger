@@ -1,47 +1,28 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Change hard drive on workstation 005",
-      "attention": false,
-      "date": "04-02-20",
-      "tech": "Sara Sanders"
-    },
-    {
-      "id": 2,
-      "message": "Workstation on 009 not posting",
+      "message": "clear station 678 for maintenance",
       "attention": true,
-      "date": "04-02-20",
-      "tech": "John Doe"
-    },
-    {
-      "id": 3,
-      "message": "Changed memory on workstation 050",
-      "attention": false,
-      "date": "04-02-20",
-      "tech": "James Tran"
+      "tech": "Sarah Sanders",
+      "date": "2020-05-27T05:45:20.077Z",
+      "id": 2
     }
   ],
   "techs": [
     {
       "id": 1,
-      "firstname": "Sara",
-      "lastname": "Sanders"
+      "firstName": "Sara",
+      "lastName": "Sanders"
     },
     {
       "id": 2,
-      "firstname": "John",
-      "lastname": "Doe"
+      "firstName": "John",
+      "lastName": "Doe"
     },
     {
       "id": 3,
-      "firstname": "James",
-      "lastname": "Tran"
-    },
-    {
-      "firstname": "Peter",
-      "lastname": "Market",
-      "id": 4
+      "firstName": "James",
+      "lastName": "Tran"
     }
   ]
 }
