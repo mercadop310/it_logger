@@ -1,11 +1,25 @@
 {
   "logs": [
     {
-      "message": "clear station 678 for maintenance",
+      "id": 2,
+      "message": "station 678 requires immediate attention",
       "attention": true,
-      "tech": "Sarah Sanders",
-      "date": "2020-05-27T05:45:20.077Z",
-      "id": 2
+      "tech": "Mark Myers",
+      "date": "2020-05-27T17:50:05.045Z"
+    },
+    {
+      "id": 3,
+      "message": "system updated on station 444",
+      "attention": true,
+      "tech": "Mark Myers",
+      "date": "2020-05-27T17:49:34.602Z"
+    },
+    {
+      "id": 4,
+      "message": "need more paper on station 765",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2020-05-27T17:31:31.399Z"
     }
   ],
   "techs": [
@@ -23,6 +37,16 @@
       "id": 3,
       "firstName": "James",
       "lastName": "Tran"
+    },
+    {
+      "firstName": "Jill ",
+      "lastName": "Scott",
+      "id": 6
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Scott",
+      "id": 7
     }
   ]
 }
